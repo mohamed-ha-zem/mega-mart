@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
-import { Link } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import { Axios } from "../../../Api/Axios/axios";
 import { CAT } from "../../../Api/api";
 import { motion } from "framer-motion";
@@ -43,7 +43,7 @@ export default function CategoriesLinks() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             >
-            تصفح الفئات
+                categories
             </motion.h2>
             <div className="hidden md:flex flex-wrap gap-6 justify-center">
             {loading ? (
@@ -66,20 +66,20 @@ export default function CategoriesLinks() {
                     animate="visible"
                     whileHover="hover"
                     >
-                        <div className="w-24 h-24 rounded-full bg-white flex items-center justify-center overflow-hidden shadow-lg border border-orange-200 hover:border-orange-300 transition-colors">
+                        <NavLink to={`category/${category.id}`} className="w-24 h-24 rounded-full bg-white flex items-center justify-center overflow-hidden shadow-lg border border-orange-200 hover:border-orange-300 transition-colors">
                             <img
                             src={category.image}
                             alt={category.title}
                             className="w-20 h-20 object-contain"
                             />
-                        </div>
+                        </NavLink>
                         <motion.div
                             variants={linkVariants}
                             whileHover="hover"
                             whileTap="tap"
                         >
                             <Link
-                            to={`/category/${category.id}`}
+                            to={`category/${category.id}`}
                             className="text-gray-700 hover:text-blue-600 mt-2 text-sm font-semibold bg-orange-100 px-3 py-1 rounded-lg text-center no-underline transition-colors no-underline"
                             >
                             {category.title.slice(0, 10)}
@@ -114,6 +114,7 @@ export default function CategoriesLinks() {
                     </Link>
                     </motion.div>
                 </motion.div>
+                <Outlet/>
                 </>
             )}
             </div>

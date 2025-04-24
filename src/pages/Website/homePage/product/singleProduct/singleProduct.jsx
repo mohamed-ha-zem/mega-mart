@@ -3,7 +3,7 @@ import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { Axios } from "../../../../../Api/Axios/axios";
 import { pro } from "../../../../../Api/api";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { faCartShopping, faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
 import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,6 +19,7 @@ export default function SingleProduct() {
     const { id } = useParams();
     const [count, setCount] = useState(0);
     const cart = useContext(Cart);
+    const nav = useNavigate()
 
     useEffect(() => {
         Axios.get(`${pro}/${id}`)
@@ -103,6 +104,15 @@ export default function SingleProduct() {
 
     return (
         <div className="bg-gradient-to-br from-orange-500 to-pink-300 min-h-screen py-12">
+            <motion.button
+                onClick={() => nav(-1)}
+                className="mb-6 px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold shadow-md ml-5"
+                variants={buttonVariants}
+                whileHover="hover"
+                whileTap="tap"
+            >
+                back
+            </motion.button>
         {loading ? (
             <div className="max-w-7xl mx-auto px-6">
             <motion.div
@@ -178,7 +188,7 @@ export default function SingleProduct() {
                 <p className="text-gray-600 text-sm my-2">{product.About}</p>
                 <p className="text-gray-800 text-base line-clamp-3">{product.description}</p>
                 <span className="inline-block bg-blue-600 text-white text-xs font-semibold rounded-full px-3 py-1 my-2">
-                    تخفيض
+                    sale
                 </span>
                 <hr className="my-4 border-gray-300" />
                 <div className="flex items-center justify-between">

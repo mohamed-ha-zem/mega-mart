@@ -18,7 +18,6 @@ import Categories from './pages/Website/categories/categories'
 import Porducts from './pages/Website/Products/products'
 import UpdateProduct from './pages/Website/Products/updateProduct'
 import AddProduct from './pages/Website/Products/addProduct'
-import Navbar from './pages/Website/homePage/navBar'
 import HomeCategories from './pages/Website/homePage/homeCategories'
 import Website from './pages/Website/homePage/website'
 import SingleProduct from './pages/Website/homePage/product/singleProduct/singleProduct'
@@ -30,7 +29,6 @@ export default function App() {
     <div>
       <Routes>
         {/* Globel Links */}
-        {/* <Route path='/' element={<HomePage/>}/> */}
         <Route element={<Website/>}>
           <Route path='/' element={<HomePage/>}/>
           <Route path='/homeCategories' element={<HomeCategories/>}/>

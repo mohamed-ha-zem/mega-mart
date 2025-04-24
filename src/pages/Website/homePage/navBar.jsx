@@ -64,8 +64,8 @@ export default function Navbar() {
                     <div className="flex items-center justify-between">
                         <div>
                             <div className="flex mt-4">
-                                <p className="mr-3 text-2xl text-blue-700">{product.price}$</p>
-                                <del className="text-gray-900">{product.discount}$</del>
+                                <p className="mr-3 text-2xl text-blue-700">{product.price - product.discount}$</p>
+                                <del className="text-gray-900">{product.price}$</del>
                             </div>
                             <div>
                                 <PlusAndMinus changeCount={changeCount} id={product.id} count={product.count || 1} setCount={(count) => setCount(count)}/>

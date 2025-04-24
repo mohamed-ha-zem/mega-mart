@@ -82,7 +82,7 @@ export default function Categories(){
                 {menu.isOpen ? <div style={{backgroundColor: "rgb(0 0 0 / 65%)" , width: "98.5vw" , height: "100vh" , position: "absolute", overflow: "hidden" , top: "0px" , left: "0px"}}></div>: <div></div>}
 
                 {/* Search and Date Inputs */}
-                <div className="flex flex-col sm:flex-row gap-4 mb-6 max-w-7xl mx-auto">
+                <div className="flex flex-col sm:flex-row gap-4 mb-6 max-w-7xl" style={{marginRight: marginLeft.marginLeft}}>
                     <form className="flex-1">
                     <input
                         type="search"
@@ -101,7 +101,7 @@ export default function Categories(){
                 </div>
 
                 {/* Categories Cards */}
-                <div className="max-w-7xl mx-auto">
+                <div className="max-w-7xl" style={{marginRight: marginLeft.marginLeft}}>
                     <h1 className="text-3xl font-bold text-blue-800 mb-6">Categories Page</h1>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {showWhichData.map((category) => (
@@ -140,7 +140,7 @@ export default function Categories(){
                 </div>
 
                 {/* Pagination and Limit */}
-                <div className="flex flex-col items-end max-w-7xl mx-auto mt-6">
+                <div className="flex flex-col items-end max-w-7xl mt-6" style={{marginRight: marginLeft.marginLeft}}>
                     <select
                     className="mb-4 p-2 rounded-lg border border-blue-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                     onChange={(e) => setLimit(e.target.value)}

@@ -37,7 +37,7 @@ export default function ProductHome(props) {
             <h2 className="text-xl font-bold text-blue-800 italic truncate">{props.title}</h2>
             <p className="text-gray-600 text-sm line-clamp-2">{props.description}</p>
             <span className="inline-block bg-blue-600 text-white text-xs font-semibold rounded-full px-3 py-1 mb-3">
-            تخفيض
+            sale
             </span>
             <motion.img
             src={props.image || "/assets/default-product.png"}

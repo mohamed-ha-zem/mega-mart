@@ -1,77 +1,3 @@
-// import { USER, USERS } from "../../../Api/api"
-// import { useEffect, useState } from "react"
-// import { Axios } from "../../../Api/Axios/axios"
-// import ShowTable from "../../../components/Table"
-
-// export default function Users(){
-//     const [users , setUsers] = useState([])
-//     const [currentUser , setCurrentUser] = useState("")
-//     const [page , setPage] = useState(1)
-//     const [limit , setLimit] = useState(3)
-//     const [total , setTotal] = useState(0)
-//     const [loading , setLoading] = useState(false)
-
-
-//     useEffect(() => {
-//         Axios.get(`${USER}`).then((res) => setCurrentUser(res.data))
-//     } , [])
-
-//     async function handleDelete(id){
-//         try{
-//             const res = await Axios.delete(`${USER}/${id}`)
-//             setUsers((prev) => prev.filter((item) => item.id !== id))
-//             console.log(res)
-//         }catch(err){
-//             console.log(err)
-//         } 
-//     }
-
-//     useEffect(() => {
-//         setLoading(true)
-//         Axios.get(`/${USERS}?limit=${limit}&page=${page}`, {
-//         }).then((data) => {
-//             setUsers(data.data.data)
-//             setTotal(data.data.total)
-//             console.log(data.data)
-//         })
-//         .catch((err) => console.log(err))
-//         .finally(() => setLoading(false))
-//     } , [limit ,page])
-
-//     const header = [
-//         // {
-//         //     key: "id",
-//         //     name: "id"
-//         // },
-//         {
-//             key: "name",
-//             name: "name"
-//         },
-//         {
-//             key: "email",
-//             name: "email"
-//         },
-//         {
-//             key: "role",
-//             name: "role"
-//         },
-//         {
-//             key: "created_at",
-//             name: "created_at"
-//         },
-//         {
-//             key: "updated_at",
-//             name:"Last Login"
-//         },
-//     ]
-
-//     return (
-//         <>
-//             <ShowTable header={header} data={users} delete={handleDelete} currentUser={currentUser} limit={limit} setLimit={setLimit} page={page} setPage={setPage} loading={loading} total={total} search={"name"} searchLink={USER}/>
-//         </>
-//     );
-    
-// }
 import { USER, USERS } from "../../../Api/api"
 import { useContext, useEffect, useState } from "react"
 import { Axios } from "../../../Api/Axios/axios"
@@ -162,7 +88,7 @@ export default function Users(){
                 {menu.isOpen ? <div style={{backgroundColor: "rgb(0 0 0 / 65%)" , width: "98.5vw" , height: "100vh" , position: "absolute", overflow: "hidden" , top: "0px" , left: "0px"}}></div>: <div></div>}
 
                 {/* Search and Date Inputs */}
-                <div className="flex flex-col sm:flex-row gap-4 mb-6 max-w-7xl mx-auto">
+                <div className="flex flex-col sm:flex-row gap-4 mb-6 max-w-7xl " style={{marginRight: marginLeft.marginLeft}}>
                     <form className="flex-1">
                     <input
                         type="search"
@@ -181,7 +107,7 @@ export default function Users(){
                 </div>
 
                 {/* Users Cards */}
-                <div className="max-w-7xl mx-auto">
+                <div className="max-w-7xl" style={{marginRight: marginLeft.marginLeft}}>
                     <h1 className="text-3xl font-bold text-blue-800 mb-6">Users Page</h1>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {showWhichData.map((user) => (
@@ -222,7 +148,7 @@ export default function Users(){
                 </div>
 
                 {/* Pagination and Limit */}
-                <div className="flex flex-col items-end max-w-7xl mx-auto mt-6">
+                <div className="flex flex-col items-end max-w-7xl mt-6" style={{marginRight: marginLeft.marginLeft}}>
                     <select
                     className="mb-4 p-2 rounded-lg border border-blue-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                     onChange={(e) => setLimit(e.target.value)}

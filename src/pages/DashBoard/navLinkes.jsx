@@ -1,4 +1,4 @@
-import { faBook, faIcons, faPager, faPlus, faProcedures, faUserPlus, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faBook, faIcons, faPager, faPlus, faUserPlus, faUsers } from "@fortawesome/free-solid-svg-icons";
 
 export const Linkes = [
     {
