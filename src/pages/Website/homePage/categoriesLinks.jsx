@@ -45,7 +45,7 @@ export default function CategoriesLinks() {
             >
                 categories
             </motion.h2>
-            <div className="hidden md:flex flex-wrap gap-6 justify-center">
+            <div className="flex flex-wrap gap-6 justify-center">
             {loading ? (
                 <div className="flex flex-wrap justify-center gap-6">
                 {Array.from({ length: 12 }).map((_, index) => (

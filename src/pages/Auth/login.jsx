@@ -33,7 +33,7 @@ export function FormuseFormik() {
             setLoading(false);
             const token = res.data.token;
             cookie.set("e-commerse", token, { path: "/" }); // Set token with path
-            window.location.pathname = "/dashBoard"
+            window.location.pathname = "/"
         } catch (err) {
             setLoading(false);
             console.log("Login error:", err);

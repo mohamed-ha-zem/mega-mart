@@ -6,6 +6,6 @@ export default function RequireBack(){
     const token = cookie.get("e-commerse")
 
     return(
-        token ? window.history.back() : <Outlet/>
+        token ? location.pathname = "/" : <Outlet/>
     )
 }
