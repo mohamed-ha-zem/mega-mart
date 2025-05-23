@@ -77,7 +77,7 @@ export default function Categories(){
 
     return (
         <>
-            <div className="min-h-screen bg-gradient-to-b from-blue-100 to-yellow-100 p-4 w-screen" style={{marginLeft: marginLeft.marginLeft}}>
+            <div className="min-h-screen bg-gradient-to-b from-blue-100 to-yellow-100 p-4 w-screen relative bottom-16" style={{marginLeft: marginLeft.marginLeft}}>
                 {loading && <Loading />}
                 {menu.isOpen ? <div style={{backgroundColor: "rgb(0 0 0 / 65%)" , width: "98.5vw" , height: "100vh" , position: "absolute", overflow: "hidden" , top: "0px" , left: "0px"}}></div>: <div></div>}
 
@@ -155,12 +155,4 @@ export default function Categories(){
             </div>
         </>
     );
-    // return (
-    //     <>
-    //         <div>
-    //             <ShowTable header={header} data={categories} delete={handleDelete} limit={limit} setLimit={setLimit} page={page} setPage={setPage} loading={loading} total={total} search={"title"} searchLink={cat}/>
-    //         </div>
-    //     </>
-    // );
-    
 }

@@ -56,7 +56,7 @@ export default function PlusAndMinus (props){
             type="text"
             value={quantity}
             onChange={handleInputChange}
-            className="w-10 h-10 text-center bg-white border-t border-b border-gray-300 outline-none"
+            className="w-10 h-10 text-center bg-white border-t border-b border-gray-300 outline-none text-black"
         />
 
         {/* زر الزيادة */}

@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
 import CategoriesLinks from "./categoriesLinks";
 import LandingPage from "./landingPage";
-import LatestProduct from "./product/latestProduct";
-import LatestRated from "./product/latestRated";
-import TopRated from "./product/topRated";
 
 // Animation variants
 const sectionVariants = {
@@ -19,17 +16,12 @@ export default function HomePage() {
         initial="hidden"
         animate="visible"
         >
-        <motion.div variants={sectionVariants}>
-            <LandingPage />
-        </motion.div>
-        <motion.div variants={sectionVariants}>
-            <CategoriesLinks />
-        </motion.div>
-        {/* <LatestProduct /> */}
-        {/* <div className="flex flex-wrap justify-center">
-            <TopRated />
-            <LatestRated />
-        </div> */}
+            <motion.div variants={sectionVariants}>
+                <LandingPage />
+            </motion.div>
+            <motion.div variants={sectionVariants}>
+                <CategoriesLinks />
+            </motion.div>
         </motion.div>
     );
 }

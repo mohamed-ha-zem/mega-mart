@@ -17,7 +17,7 @@ export const Linkes = [
         path: "categories",
         title: "Categories",
         icon: faIcons,
-        role: ["1995" , "1999"]
+        role: ["1995" , "1999" , "2001"]
     },
     {
         path: "categories/add",
@@ -29,7 +29,7 @@ export const Linkes = [
         path: "products",
         title: "Products",
         icon: faPager,
-        role: ["1995" , "1999"]
+        role: ["1995" , "1999" , "2001"]
     },
     {
         path: "products/add",
@@ -37,10 +37,4 @@ export const Linkes = [
         icon: faPlus,
         role: ["1995" , "1999"]
     },
-    {
-        path: "users/writer",
-        title: "Writer",
-        icon: faBook,
-        role: ["1995", "1996"]
-    }
 ]

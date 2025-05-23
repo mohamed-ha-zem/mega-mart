@@ -4,8 +4,6 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom';
 import 'react-loading-skeleton/dist/skeleton.css'
-// import "react-image-gallery/styles/css/image-gallery.css";
-// import '@fortawesome/fontawesome-free/js/all.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "../src/components/Loading.jsx"

@@ -1,4 +1,4 @@
-import { use, useContext, useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Axios } from "../../../Api/Axios/axios"
 import { PRO, pro } from "../../../Api/api"
 import { Menu } from "../Context/contextMenu"
@@ -107,7 +107,7 @@ export default function Porducts(){
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-600 to-green-300 p-6 w-screen" style={{ marginLeft: marginLeft.marginLeft}}>
+        <div className="min-h-screen bg-gradient-to-br from-blue-600 to-green-300 p-6 w-screen relative bottom-16" style={{ marginLeft: marginLeft.marginLeft}}>
         {loading && <Loading />}
         {menu.isOpen ? <div style={{backgroundColor: "rgb(0 0 0 / 65%)" , width: "98.5vw" , height: "100vh" , position: "absolute", overflow: "hidden" , top: "0px" , left: "0px"}}></div>: <div></div>}
 

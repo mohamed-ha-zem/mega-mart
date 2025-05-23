@@ -3,6 +3,7 @@ import { Axios } from "../../../../Api/Axios/axios";
 import { LatestSale } from "../../../../Api/api";
 import ProductHome from "./productHome";
 import Skeleton from 'react-loading-skeleton'
+import { motion } from "framer-motion";
 
 export default function LatestProduct(){
 

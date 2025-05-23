@@ -1,3 +1,4 @@
+// صفحه لتغيير التاريخ الاتي من الباك اند بصيخه افضل
 export default function TranseFormDate(date){
     const selectedDate = new window.Date(date)
     const getFullYear = selectedDate.getFullYear()

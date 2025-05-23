@@ -212,7 +212,7 @@ export default function AddProduct() {
     ];
 
     return (
-        <div className="bg-gradient-to-br from-orange-500 to-pink-300 min-h-screen py-12 w-screen">
+        <div className="bg-gradient-to-br from-orange-500 to-pink-300 min-h-screen py-12 w-screen relative bottom-20">
         {loading && <Loading />}
         <div className="max-w-3xl mx-auto px-6">
             <motion.h1

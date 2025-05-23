@@ -49,15 +49,15 @@ export default function CategoriesLinks() {
             {loading ? (
                 <div className="flex flex-wrap justify-center gap-6">
                 {Array.from({ length: 12 }).map((_, index) => (
-                    <div key={index} className="m-2">
-                    <Skeleton circle height={96} width={96} />
-                    <Skeleton height={20} width={70} className="mt-2 mx-auto" />
+                    <div key={index} className="m-2 flex justify-center items-center flex-col">
+                        <Skeleton circle height={96} width={96} />
+                        <Skeleton height={20} width={70} className="mt-2 mx-auto" />
                     </div>
                 ))}
                 </div>
             ) : (
                 <>
-                {categories.slice(-11).map((category, index) => (
+                {categories.map((category, index) => (
                     <motion.div
                     key={index}
                     className="flex flex-col items-center mx-2 cursor-pointer"
@@ -82,7 +82,7 @@ export default function CategoriesLinks() {
                             to={`category/${category.id}`}
                             className="text-gray-700 hover:text-blue-600 mt-2 text-sm font-semibold bg-orange-100 px-3 py-1 rounded-lg text-center no-underline transition-colors no-underline"
                             >
-                            {category.title.slice(0, 10)}
+                            {category.title}
                             </Link>
                         </motion.div>
                     </motion.div>
